@@ -1,0 +1,13 @@
+Support Vector Machine (SVM) Classifier for ratio:  0.15
+Best Parameters: {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}
+Random state:  54
+Accuracy: 0.9743589743589743
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.92      0.96        25
+           1       0.96      1.00      0.98        53
+
+    accuracy                           0.97        78
+   macro avg       0.98      0.96      0.97        78
+weighted avg       0.98      0.97      0.97        78

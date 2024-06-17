@@ -1,0 +1,14 @@
+Best number of estimators: 10
+
+Random Forest Classifier:
+Random state:  15
+Accuracy: 0.98
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.96      1.00      0.98        54
+           1       1.00      0.96      0.98        46
+
+    accuracy                           0.98       100
+   macro avg       0.98      0.98      0.98       100
+weighted avg       0.98      0.98      0.98       100

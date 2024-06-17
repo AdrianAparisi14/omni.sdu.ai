@@ -1,0 +1,43 @@
+|Best Value So Far |Hyperparameter
+|9                 |units_1
+|0.4               |dropout_rate_1
+|29                |units_2
+|0.2               |dropout_rate_2
+
+def build_model(hp):
+    model = Sequential()
+    model.add(LSTM(units=hp.Int('units_1', min_value=2, max_value=50, step=1), 
+                   input_shape=((length_series - 1), 1) 
+                   ,return_sequences=True))
+    model.add(Dropout(rate=hp.Float('dropout_rate_1', min_value=0.2, max_value=0.5, step=0.1)))
+    model.add(LSTM(units=hp.Int('units_2', min_value=1, max_value=30, step=1)))
+    model.add(Dropout(rate=hp.Float('dropout_rate_2', min_value=0.2, max_value=0.5, step=0.1)))
+    model.add(Dense(1, activation='sigmoid'))
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    return model
+
+# Define the HyperModel
+hypermodel = build_model
+
+# Define the tuner
+tuner = RandomSearch(
+    hypermodel,
+    objective='val_loss',
+    max_trials=15,
+    directory='../../../../../Documents/sdu.extensions.2023.1.1/exts/omni.sdu.ai/omni/sdu/ai/examples/LSTM/model_real_robot/admittance/training',
+    project_name='lstm_hyperparameter_tuning_position')
+
+# Perform hyperparameter tuning
+tuner.search(X_train_scaled, y_train, epochs=200, validation_split=0.1)
+
+# Get the best hyperparameters
+best_hps=tuner.get_best_hyperparameters(num_trials=1)[0]
+
+# Build the model with the best hyperparameters
+best_model = tuner.hypermodel.build(best_hps)
+
+# Train the best model
+best_model.fit(X_train_scaled, y_train, epochs=200, validation_split=0.1)
+
+# Save the best model
+best_model.save('../../../../../Documents/sdu.extensions.2023.1.1/exts/omni.sdu.ai/omni/sdu/ai/examples/LSTM/model_real_robot/admittance/model/LSTMmodel_part_sdu.h5')

@@ -1,0 +1,25 @@
+Support Vector Machine (SVM) Classifier:
+Accuracy: 0.9772727272727273
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.95      1.00      0.98        21
+           1       1.00      0.96      0.98        23
+
+    accuracy                           0.98        44
+   macro avg       0.98      0.98      0.98        44
+weighted avg       0.98      0.98      0.98        44
+
+Best number of estimators: 50
+
+Random Forest Classifier:
+Accuracy: 0.9545454545454546
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95        21
+           1       0.96      0.96      0.96        23
+
+    accuracy                           0.95        44
+   macro avg       0.95      0.95      0.95        44
+weighted avg       0.95      0.95      0.95        44

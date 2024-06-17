@@ -1,0 +1,27 @@
+LSTM Model with  0.0  percent of augmentation data :
+Accuracy: 0.68
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.74      0.63      0.68        54
+           1       0.63      0.74      0.68        46
+
+    accuracy                           0.68       100
+   macro avg       0.68      0.68      0.68       100
+weighted avg       0.69      0.68      0.68       100
+
+network structure:
+learning_rate = 0.001 
+    optimizer = Adam(learning_rate=learning_rate)
+
+    model = Sequential()
+    model.add(LSTM(25, input_shape=((length_series - 1), 1) 
+            ,return_sequences=True))
+    model.add(Dropout(rate=0.1))
+    model.add(LSTM(5))
+    # model.add(Dropout(rate=0.2))
+    model.add(Dense(1, activation='sigmoid'))  # binary classification (Success or Failure)
+    model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
+
+    # Train the model
+    model.fit(X_train_scaled, y_train, epochs=150, batch_size=128, validation_split=0.1)

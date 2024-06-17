@@ -1,0 +1,11 @@
+LSTM Model with  30.0  percent of augmentation data :
+Accuracy: 0.79
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.61      0.76        54
+           1       0.69      1.00      0.81        46
+
+    accuracy                           0.79       100
+   macro avg       0.84      0.81      0.79       100
+weighted avg       0.86      0.79      0.78       100

@@ -1,0 +1,12 @@
+LSTM Model:
+Random state:  10
+Accuracy: 0.8297872340425532
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.74      0.85        61
+           1       0.67      1.00      0.80        33
+
+    accuracy                           0.83        94
+   macro avg       0.84      0.87      0.83        94
+weighted avg       0.89      0.83      0.83        94

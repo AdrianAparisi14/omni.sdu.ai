@@ -1,0 +1,11 @@
+Support Vector Machine (SVM) Classifier:
+Accuracy: 0.9838709677419355
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99        35
+           1       1.00      0.96      0.98        27
+
+    accuracy                           0.98        62
+   macro avg       0.99      0.98      0.98        62
+weighted avg       0.98      0.98      0.98        62

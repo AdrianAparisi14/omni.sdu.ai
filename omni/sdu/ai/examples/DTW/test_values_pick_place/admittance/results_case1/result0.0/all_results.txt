@@ -1,0 +1,102 @@
+TRAINING WITH RATIO OF REAL DATA INTO SIM DATA OF : 0.0
+Accuracy: 0.9615384615384616
+Confusion Matrix:
+[[22  3]
+ [ 0 53]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.88      0.94        25
+           1       0.95      1.00      0.97        53
+
+    accuracy                           0.96        78
+   macro avg       0.97      0.94      0.95        78
+weighted avg       0.96      0.96      0.96        78
+
+X[:sim_ammount,:,:], X_real[:real_ammount,:,:]   (126, 4501) (22, 4501)
+y[:sim_ammount,:], y_real[:real_ammount,:]   (126,) (22,)
+X_combined.shape:  (148, 4501)
+y_combined.shape:  (148,)
+shape X in function DTW():  (148, 4501)
+shape X in function DTW():  (78, 4501)
+
+TRAINING WITH RATIO OF REAL DATA INTO SIM DATA OF : 0.15
+Accuracy: 0.9743589743589743
+Confusion Matrix:
+[[23  2]
+ [ 0 53]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.92      0.96        25
+           1       0.96      1.00      0.98        53
+
+    accuracy                           0.97        78
+   macro avg       0.98      0.96      0.97        78
+weighted avg       0.98      0.97      0.97        78
+
+X[:sim_ammount,:,:], X_real[:real_ammount,:,:]   (104, 4501) (44, 4501)
+y[:sim_ammount,:], y_real[:real_ammount,:]   (104,) (44,)
+X_combined.shape:  (148, 4501)
+y_combined.shape:  (148,)
+shape X in function DTW():  (148, 4501)
+shape X in function DTW():  (78, 4501)
+
+TRAINING WITH RATIO OF REAL DATA INTO SIM DATA OF : 0.3
+Accuracy: 0.9615384615384616
+Confusion Matrix:
+[[22  3]
+ [ 0 53]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.88      0.94        25
+           1       0.95      1.00      0.97        53
+
+    accuracy                           0.96        78
+   macro avg       0.97      0.94      0.95        78
+weighted avg       0.96      0.96      0.96        78
+
+X[:sim_ammount,:,:], X_real[:real_ammount,:,:]   (81, 4501) (67, 4501)
+y[:sim_ammount,:], y_real[:real_ammount,:]   (81,) (67,)
+X_combined.shape:  (148, 4501)
+y_combined.shape:  (148,)
+shape X in function DTW():  (148, 4501)
+shape X in function DTW():  (78, 4501)
+
+TRAINING WITH RATIO OF REAL DATA INTO SIM DATA OF : 0.45
+Accuracy: 0.9615384615384616
+Confusion Matrix:
+[[22  3]
+ [ 0 53]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.88      0.94        25
+           1       0.95      1.00      0.97        53
+
+    accuracy                           0.96        78
+   macro avg       0.97      0.94      0.95        78
+weighted avg       0.96      0.96      0.96        78
+
+X[:sim_ammount,:,:], X_real[:real_ammount,:,:]   (59, 4501) (78, 4501)
+y[:sim_ammount,:], y_real[:real_ammount,:]   (59,) (78,)
+X_combined.shape:  (137, 4501)
+y_combined.shape:  (137,)
+shape X in function DTW():  (137, 4501)
+shape X in function DTW():  (78, 4501)
+
+TRAINING WITH RATIO OF REAL DATA INTO SIM DATA OF : 0.6
+Accuracy: 0.9615384615384616
+Confusion Matrix:
+[[22  3]
+ [ 0 53]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      0.88      0.94        25
+           1       0.95      1.00      0.97        53
+
+    accuracy                           0.96        78
+   macro avg       0.97      0.94      0.95        78
+weighted avg       0.96      0.96      0.96        78

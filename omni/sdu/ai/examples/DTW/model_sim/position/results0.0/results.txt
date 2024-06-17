@@ -1,0 +1,48 @@
+TRAINING WITH RATIO OF REAL DATA INTO SIM DATA OF : 0.0
+Accuracy: 1.0
+Confusion Matrix:
+[[54  0]
+ [ 0 46]]
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        54
+           1       1.00      1.00      1.00        46
+
+    accuracy                           1.00       100
+   macro avg       1.00      1.00      1.00       100
+weighted avg       1.00      1.00      1.00       100
+
+
+for row in X:
+        new_curve = np.array(row)
+        # print("New row: ", row)
+        # print("New curve: ", new_curve)
+
+        # Compute DTW distance
+        distance, path = fastdtw(mean_ref_time_series, new_curve)
+        dtw_distances.append(distance)
+        
+        # Set of multiple features that can be extracted from a time-series
+        additional_features = [
+            # skew(new_curve),
+            # kurtosis(new_curve),
+            # np.percentile(new_curve, 25),
+            # np.percentile(new_curve, 75),
+            # np.percentile(new_curve, 75) - np.percentile(new_curve, 25),
+            # np.max(np.abs(np.diff(new_curve))),
+            # np.median(new_curve),
+            # np.median(np.abs(new_curve - np.median(new_curve))),
+            new_curve.mean(),
+            # new_curve.std(),
+            distance,
+        ]
+        
+        # Empty the buffer
+        buffer_curve = []
+
+        # Extract features for discriminant analysis (you can use other features as well)
+        # feature = [new_curve.mean(), new_curve.std(), np.median(new_curve), distance]  # First approach used for features
+        # feature = [skew(new_curve), kurtosis(new_curve), np.median(new_curve), distance] # Second approach used for features
+        feature = additional_features
+        features.append(feature)
